@@ -67,6 +67,21 @@ trade-off curve, and it is the most important plot in the report.
 | 0.4 | | | | |
 | 0.3 | | | | |
 
+### 2026-10-12 17:26 (real, lambda)
+
+real data, 44419 items, 1000 steps; seed=42, k=5, n_candidates=50, max_candidates=500, n_users=200, queries_per_user=5, deplete_fraction=0.9, encoder=patrickjohncyh/fashion-clip; sold items scored per D15; ILD in the alpha=0.5 fused space
+
+| System | alpha | lambda | P@5 | Coverage | Gini | ILD | Sold shown % | Latency mean (ms) | Latency p95 (ms) | Short lists % |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Ours, lambda=0.3 | 0.5 | 0.3 | 0.810 | 0.100 | 0.909 | 0.212 | 0.0 | 4.61 | 13.42 | 0.0 |
+| Ours, lambda=0.4 | 0.5 | 0.4 | 0.819 | 0.100 | 0.910 | 0.208 | 0.0 | 3.99 | 10.24 | 0.0 |
+| Ours, lambda=0.5 | 0.5 | 0.5 | 0.829 | 0.101 | 0.908 | 0.195 | 0.0 | 3.65 | 9.09 | 0.0 |
+| Ours, lambda=0.6 | 0.5 | 0.6 | 0.846 | 0.102 | 0.907 | 0.173 | 0.0 | 3.08 | 5.76 | 0.0 |
+| Ours, lambda=0.7 | 0.5 | 0.7 | 0.856 | 0.101 | 0.908 | 0.158 | 0.0 | 2.85 | 5.21 | 0.0 |
+| Ours, lambda=0.8 | 0.5 | 0.8 | 0.861 | 0.100 | 0.910 | 0.147 | 0.0 | 2.51 | 3.48 | 0.0 |
+| Ours, lambda=0.9 | 0.5 | 0.9 | 0.865 | 0.100 | 0.910 | 0.138 | 0.0 | 2.21 | 2.93 | 0.0 |
+| Ours, lambda=1.0 | 0.5 | 1 | 0.866 | 0.099 | 0.911 | 0.131 | 0.0 | 2.52 | 3.20 | 0.0 |
+
 ## Substitution diagnostics
 
 Evidence that Stage C keeps lists full as stock depletes. Bucket the simulated
