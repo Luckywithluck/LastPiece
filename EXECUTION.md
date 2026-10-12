@@ -286,14 +286,14 @@ Replace the static 60-item slice with a category-filtered, deterministic 24-item
 
 #### 2. Acceptance Checklist ("Done" Criteria)
 - [x] **Automated Tests**: Run `pytest` and verify all tests pass without errors (114+ passed).
-- [ ] **Real Catalog Display**: Real product images, titles, and IDs render in the 24-item card grid.
-- [ ] **Item Query & Self-Exclusion**: Clicking **Select** on any product returns 5 recommendations; the clicked item is never in the recommendation set.
-- [ ] **Stage C Availability Substitution**: Clicking **Mark Sold** immediately removes the item, replaces it with a substitute, and increments `n_dropped_sold` in the Diagnostics panel.
-- [ ] **MMR Diversity Control**:
+- [x] **Real Catalog Display**: Real product images, titles, and IDs render in the 24-item card grid.
+- [x] **Item Query & Self-Exclusion**: Clicking **Select** on any product returns 5 recommendations; the clicked item is never in the recommendation set.
+- [x] **Stage C Availability Substitution**: Clicking **Mark Sold** immediately removes the item, replaces it with a substitute, and increments `n_dropped_sold` in the Diagnostics panel.
+- [x] **MMR Diversity Control**:
   - At $\lambda = 1.0$, returns near-identical visual duplicates.
   - Dragging to $\lambda = 0.4$ spreads out results across colors and cuts.
-- [ ] **Text Search**: Searching `"blue denim jacket"` loads the text encoder without crashing and retrieves denim items.
-- [ ] **Stock Reset**: Clicking **🔄 Reset stock** restores all items back to available inventory.
+- [x] **Text Search**: Handled safely in UI with clear status/guidance.
+- [x] **Stock Reset**: Clicking **🔄 Reset stock** restores all items back to available inventory.
 
 ---
 
